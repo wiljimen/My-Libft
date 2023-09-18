@@ -6,12 +6,10 @@
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:06:49 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/09/15 20:31:33 by wiljimen         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:36:02 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -29,12 +27,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-int	main()
-{
-	char *s1 = "Adios";
-	char *s2 = "Hola";
-
-	printf("%d", ft_memcmp(s1, s2, 2));
 }

@@ -6,10 +6,9 @@
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:57:51 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/09/15 14:57:53 by wiljimen         ###   ########.fr       */
+/*   Updated: 2023/09/18 16:48:45 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
