@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 15:33:50 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/09/18 16:19:22 by wiljimen         ###   ########.fr       */
+/*   Created: 2023/09/22 16:05:39 by wiljimen          #+#    #+#             */
+/*   Updated: 2023/09/22 16:08:09 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
