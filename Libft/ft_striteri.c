@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 13:06:09 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/09/27 17:26:39 by wiljimen         ###   ########.fr       */
+/*   Created: 2023/09/28 13:01:09 by wiljimen          #+#    #+#             */
+/*   Updated: 2023/09/28 13:06:11 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	n;
+	unsigned int	i;
 
-	n = 90;
-	printf("%s", ft_itoa(n));
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
