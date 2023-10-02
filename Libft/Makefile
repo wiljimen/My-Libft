@@ -31,6 +31,7 @@ SRCS = ft_atoi.c \
 	   ft_strrchr.c \
 	   ft_substr.c \
 	   ft_strtrim.c \
+	   ft_split.c \
 	   ft_strmapi.c \
 	   ft_putchar_fd.c \
 	   ft_putstr_fd.c \
@@ -42,16 +43,27 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:.c=.o)
 
+INCLUDE = libft.h
+
+BSRCS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+
+BOBJS = $(BSRCS:.c=.o)
+
 all : $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) $(INCLUDE)
 	ar -rcs $(NAME) $(OBJS)
+
+bonus : $(OBJS) $(BOBJS) $(INCLUDE)
+	ar -rcs $(NAME) $(BOBJS) $(OBJS) $(INCLUDE)
 
 $.o : %.c
 	$(cc) $(CFLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BOBJS)
 
 fclean : clean
 	$(RM) $(NAME)
