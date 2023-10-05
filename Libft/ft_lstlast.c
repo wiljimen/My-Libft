@@ -6,7 +6,7 @@
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 18:52:39 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/10/02 19:21:12 by wiljimen         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:15:27 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*last;
-
-	last = NULL;
-	next->lst;
-	while (lst != last)
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		last->next;
-		lst++;
+		lst = lst->next;
 	}
 	return (lst);
 }

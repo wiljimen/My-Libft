@@ -6,7 +6,7 @@
 /*   By: wiljimen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 18:44:09 by wiljimen          #+#    #+#             */
-/*   Updated: 2023/10/02 18:58:57 by wiljimen         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:20:17 by wiljimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	t_list	*aux;
+	int		i;
 
+	aux = lst;
 	i = 0;
-	while (lst->next)
+	while (aux != NULL)
 	{
+		aux = aux->next;
 		i++;
-		lst = lst->next;
 	}
 	return (i);
 }
